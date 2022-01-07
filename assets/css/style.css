@@ -69,6 +69,7 @@ a:hover {
 #presentation {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 #presentation .img-container::after {
@@ -106,11 +107,20 @@ a:hover {
     border-radius: 7px;
     padding: 15px;
     display: flex;
-    width: 40%;
+    width: 43%;
+    min-width: 250px;
     margin: 10px;
     position: relative;
     transition: all ease .2s;
 }
+/* media queries for under 1200px */
+@media screen and (max-width: 1200px) {
+    .projet {
+        width: 90%;
+    }
+
+}
+
 .projet div {
     margin: 5px;
 }
