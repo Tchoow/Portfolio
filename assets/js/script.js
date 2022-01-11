@@ -75,12 +75,13 @@ setInterval(function(){
             console.log("↙️")
         }
     }
-
+    
     if ( xp >= mouseX-5 && xp <= mouseX+5)
     {
          //console.log("mode rotatif on")
          droneTracker.style.top  = yp-1      + "px";
          droneTracker.style.left = xp+1      + "px";
     }
+    
 
 }, 20);

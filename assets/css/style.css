@@ -4,7 +4,7 @@ CSS RESET
 body {
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-image: url('data:image/svg+xml,%3Csvg width="52" height="26" viewBox="0 0 52 26" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath d="M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z" /%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
-
+    color: #333333;
 	animation: moveBack 15s ease infinite;
     padding: 0;
     margin: 0;
@@ -13,6 +13,25 @@ body {
     justify-content: center;
     align-items: center;
     width: 100vw;
+    overflow-x: hidden;
+
+}
+
+::-webkit-scrollbar{
+    width: 13px;
+    height: 13px;
+}
+::-webkit-scrollbar-thumb{
+background: #ffdd59;
+border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover{
+background: #B3AFB3;
+}
+::-webkit-scrollbar-track{
+background: #F0F0F0;
+border-radius: 0px;
+box-shadow: inset 0px 0px 0px 0px #F0F0F0;
 }
 
 /* kwado */
@@ -48,6 +67,7 @@ hr {
 a {
     text-decoration: none;
     color: #333333;
+    font-weight: 600;
 }
 
 a:hover {
@@ -60,6 +80,8 @@ a:hover {
     padding: 20px;
     -webkit-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.18); 
     box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.18);
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 #presentation .img-container img{
@@ -78,6 +100,22 @@ a:hover {
     flex-wrap: wrap;
 }
 
+#presentation .img-container::before {
+    content: '👋';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    border: 2px solid #ffdd59;
+    padding: 3px;
+    border-radius: 50%;
+    background-color: rgba(224, 243, 155, 0.356);
+    transform: rotate(10deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 #presentation .img-container::after {
     content: "Théo Lavie";
     color:#fff;
@@ -91,13 +129,17 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 3px solid #e9c01f;
 }
 
 
 #presentation .infos .container {
     background-color: #f1f1f1;
     padding: 20px;
-    border-radius:5px
+    border-radius:5px;
+    background-image: url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="white" fill-opacity="0.2" fill-rule="evenodd"%3E%3Cpath d="M0 40L40 0H20L0 20M40 40V20L20 40"/%3E%3C/g%3E%3C/svg%3E');
+    border-bottom: 3px solid #dfdede;
+
 }
 
 /* PROJETS */
@@ -110,6 +152,7 @@ a:hover {
 
 .projet {
     background-color: #f1f1f1;
+    background-image: url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="white" fill-opacity="0.2" fill-rule="evenodd"%3E%3Cpath d="M0 40L40 0H20L0 20M40 40V20L20 40"/%3E%3C/g%3E%3C/svg%3E');
     border-radius: 7px;
     padding: 15px;
     display: flex;
@@ -119,6 +162,7 @@ a:hover {
     margin-bottom: 15px;
     position: relative;
     transition: all ease .2s;
+    border-bottom: 3px solid #dfdede;
 }
 /* media queries for under 1200px */
 @media screen and (max-width: 1200px) {
@@ -237,10 +281,11 @@ a:hover {
 
 #profils .wrapper {
     background-color: #f1f1f1;
-    padding: 20px;
-    border-radius:7px;
-    min-height: 180px;
+    background-image: url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="white" fill-opacity="0.2" fill-rule="evenodd"%3E%3Cpath d="M0 40L40 0H20L0 20M40 40V20L20 40"/%3E%3C/g%3E%3C/svg%3E');    min-height: 180px;
     margin: 10px 0px;
+    margin-bottom: 15px;
+    border-radius: 7px;
+    border-bottom: 3px solid #dfdede;
 }
 
 #profils .wrapper .img-container{
@@ -316,4 +361,46 @@ a:hover {
 
 #kwado .img-container img {
     height: 50px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+h1 {
+    position: relative;
+    margin-bottom: 10px;
+    
+}
+h1::before {
+    content: '';
+    left: -8px;
+    position: absolute;
+    height: 100%;
+    background-color: #ffdd59;
+    width: 3px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+h2 {
+    margin-left: 10px;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+h2::before {
+    content: '';
+    left: -8px;
+    top:50%;
+    transform: translateY(-50%);
+    position: absolute;
+    height: 5px;
+    background-color: #ffdd59;
+    width: 5px;
+    margin-right: 50%;
+    border-radius: 3px;
 }
