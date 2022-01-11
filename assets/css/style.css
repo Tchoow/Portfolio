@@ -152,6 +152,7 @@ a:hover {
     text-align: center;
     opacity: 0.8;
     font-style: italic;
+    margin-top: 10px;
 }
 
 #projets .wrapper{
