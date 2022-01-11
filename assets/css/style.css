@@ -61,7 +61,9 @@ hr {
     border-bottom: 0;
     margin-top:20px;
     margin-bottom:20px;
+    position: relative;
 }
+
 
 /* a */
 a {
@@ -82,6 +84,7 @@ a:hover {
     box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.18);
     margin-top: 20px;
     margin-bottom: 10px;
+    outline: 1px solid #ffde5965;
 }
 
 #presentation .img-container img{
@@ -97,6 +100,7 @@ a:hover {
 #presentation {
     display: flex;
     justify-content: space-evenly;
+    gap: 1rem;
     flex-wrap: wrap;
 }
 
@@ -144,10 +148,17 @@ a:hover {
 
 /* PROJETS */
 
+#projets #info {
+    text-align: center;
+    opacity: 0.8;
+    font-style: italic;
+}
+
 #projets .wrapper{
     flex-wrap: wrap;
     display: flex;
     justify-content: space-evenly;
+    gap:1rem;
 }
 
 .projet {
@@ -158,7 +169,6 @@ a:hover {
     display: flex;
     width: 43%;
     min-width: 250px;
-    margin: 10px;
     margin-bottom: 15px;
     position: relative;
     transition: all ease .2s;
@@ -166,6 +176,7 @@ a:hover {
 }
 /* media queries for under 1200px */
 @media screen and (max-width: 1200px) {
+
     .projet {
         width: 90%;
     }
@@ -264,6 +275,43 @@ a:hover {
     transition: all ease .1s;
 }
 
+#projets .wrapper .game {
+    position: relative;
+}
+
+#projets .wrapper .game::before {
+    content: '🎮';
+    position: absolute;
+    top:-10px;
+    left: 50%;
+    border-radius: 50%;
+    padding: 4px;
+    border: 2px solid #333333;
+    display: flex;
+    justify-content: center;
+    background-color: #33333325;
+    align-items: center;
+}
+
+
+#projets .wrapper .tool::before {
+    content: '🔧';
+    position: absolute;
+    top:-10px;
+    left: 50%;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    padding: 4px;
+    border: 2px solid #b3b3b3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b3b3b344;
+
+}
+
+
 /* PROFILS */
 
 #profils .wrapper{
@@ -355,9 +403,10 @@ a:hover {
 #kwado .img-container:hover {
     cursor: pointer;
     transform: scale(1.1);
-    transition:all ease 0.3s
+    transition:all ease 0.3s;
     
 }
+
 
 #kwado .img-container img {
     height: 50px;
