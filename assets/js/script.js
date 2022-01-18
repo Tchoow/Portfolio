@@ -6,7 +6,6 @@
 */
 
 const droneTracker = document.querySelector(".drone-follow");
-// Taille de l'image 50
 
 
 var mouseX = 0;
