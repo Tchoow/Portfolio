@@ -6,35 +6,27 @@
 */
 
 const droneTracker = document.querySelector(".drone-follow");
-
+const containerKwado = document.querySelector("#kwado");
 
 var mouseX = 0;
 var mouseY = 0;
 var xp = 0;
 var yp = 0;
 
-var rotate = 20
 
 document.addEventListener('mousemove', e => {
-
-    mouseX =  e.pageX - 25;
-    mouseY =  e.pageY - 25;
-
-    
-
-
+    if (containerKwado.contains(e.target)) {
+        mouseX = e.clientX / 1.50;
+        mouseY = e.clientY / 1.25;
+    }
 })
 
 
 setInterval(function(){
 
-    
     xp += ((mouseX - xp)/12);
-
     yp += ((mouseY - yp)/12);
-
     droneTracker.style.left = xp     + "px";
-
     droneTracker.style.top  = yp     + "px";
     
     
@@ -73,13 +65,6 @@ setInterval(function(){
             droneTracker.style.transform = `rotate(${rotate+90}deg)`;
             console.log("↙️")
         }
-    }
-    
-    if ( xp >= mouseX-5 && xp <= mouseX+5)
-    {
-         //console.log("mode rotatif on")
-         droneTracker.style.top  = yp-1      + "px";
-         droneTracker.style.left = xp+1      + "px";
     }
     
 

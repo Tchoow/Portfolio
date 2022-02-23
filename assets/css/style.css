@@ -37,7 +37,10 @@ box-shadow: inset 0px 0px 0px 0px #F0F0F0;
 /* kwado */
 .drone-follow {
     height: 50px;
-    /*position: absolute;*/
+    position: absolute;
+    z-index: 5000;
+    top:5px;
+    left: 5px;
 }
 
 
@@ -160,6 +163,18 @@ a:hover {
     display: flex;
     justify-content: space-evenly;
     gap:1rem;
+}
+
+#projets .infos h2 {
+    margin-bottom: 10px;
+}
+
+/* Reset */
+#projets #project-card:hover {
+    color:#333333
+}
+#projets #project-card {
+    font-weight: 100;
 }
 
 .projet {
@@ -387,6 +402,7 @@ a:hover {
     background-color: #ffde592f;
     display: flex;
     justify-content: center;
+    cursor: pointer;
     align-items: center;
     color:#33333359;
     position: relative;
