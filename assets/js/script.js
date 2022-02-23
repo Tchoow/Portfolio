@@ -17,7 +17,7 @@ var yp = 0;
 document.addEventListener('mousemove', e => {
     if (containerKwado.contains(e.target)) {
         mouseX = e.clientX / 1.50;
-        mouseY = e.clientY / 1.25;
+        mouseY = e.clientY / 1.50;
     }
 })
 
