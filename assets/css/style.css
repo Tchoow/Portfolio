@@ -433,6 +433,21 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content-w {
+    width: 80%;
+    text-align: justify;
+}
+
+
+
+footer .author {
+    font-style: italic;
+    margin: 5px;
+    
 }
 
 
@@ -470,3 +485,5 @@ h2::before {
     margin-right: 50%;
     border-radius: 3px;
 }
+
+

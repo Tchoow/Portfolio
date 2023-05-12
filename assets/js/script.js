@@ -5,13 +5,18 @@
 ╩ ╩╚╩╝╩ ╩═╩╝╚═╝
 */
 
+/* imports */
+  
+
+
+
 const droneTracker = document.querySelector(".drone-follow");
 const containerKwado = document.querySelector("#kwado");
 
 var mouseX = 0;
 var mouseY = 0;
-var xp = 0;
-var yp = 0;
+var xp     = 0;
+var yp     = 0;
 
 
 document.addEventListener('mousemove', e => {
@@ -69,3 +74,16 @@ setInterval(function(){
     
 
 }, 20);
+
+
+
+let wow = new WOW(
+    {
+    boxClass:     'wow',      // default
+    animateClass: 'animated', // default
+    offset:       0,          // default
+    mobile:       true,       // default
+    live:         true        // default
+  }
+  )
+wow.init();
