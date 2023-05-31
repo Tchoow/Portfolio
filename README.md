@@ -16,9 +16,8 @@ Consultable juste [ici](mykwad.com)
 
 
 # TODO
-- [ ] Future goal
-- [ ] Resume
-- [ ] Carrier
-- [ ] Navigation
-- [ ] Technials Skills
-- [ ] Finish readme with (ressources)
+- [x] Future goal
+- [x] Resume
+- [x] Carrier
+- [x] Navigation
+- [x] Technials Skills

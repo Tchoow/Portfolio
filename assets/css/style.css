@@ -76,9 +76,15 @@ a {
 }
 
 a:hover {
-    color: #ffdd59;
+    color: #e1c245;
 }
+
+main {
+    padding-top: 50px;
+}
+
 .page-container {
+
     border-radius: 7px;
     background-color: #fff;
     width: 60vw;
@@ -98,6 +104,7 @@ a:hover {
 #presentation .img-container{
     position: relative;
     margin-right: 25px;
+    
 }
 
 #presentation {
@@ -105,6 +112,7 @@ a:hover {
     justify-content: space-evenly;
     gap: 1rem;
     flex-wrap: wrap;
+
 }
 
 #presentation .img-container::before {
@@ -125,7 +133,7 @@ a:hover {
 
 #presentation .img-container::after {
     content: "Théo Lavie";
-    color:#fff;
+    color:#333333;
     position: absolute;
     height: 30px;
     width: 100%;
@@ -139,6 +147,10 @@ a:hover {
     border-bottom: 3px solid #e9c01f;
 }
 
+.comment-expertise {
+    text-align: center;
+}
+
 
 #presentation .infos .container {
     background-color: #f1f1f1;
@@ -146,6 +158,8 @@ a:hover {
     border-radius:5px;
     background-image: url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="white" fill-opacity="0.2" fill-rule="evenodd"%3E%3Cpath d="M0 40L40 0H20L0 20M40 40V20L20 40"/%3E%3C/g%3E%3C/svg%3E');
     border-bottom: 3px solid #dfdede;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 10px 36px 0px, rgba(0, 0, 0, 0.03) 0px 0px 0px 1px;
+
 
 }
 
@@ -158,7 +172,7 @@ a:hover {
     margin-top: 10px;
 }
 
-#projets .wrapper{
+#projets .wrapper, #expertise .wrapper, #profils .wrapper{
     flex-wrap: wrap;
     display: flex;
     justify-content: space-evenly;
@@ -173,9 +187,11 @@ a:hover {
 #projets #project-card:hover {
     color:#333333
 }
-#projets #project-card {
+#projets #project-card, #expertise #project-card{
     font-weight: 100;
 }
+
+
 
 .projet {
     background-color: #f1f1f1;
@@ -189,6 +205,8 @@ a:hover {
     position: relative;
     transition: all ease .2s;
     border-bottom: 3px solid #dfdede;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
 }
 /* media queries for under 1200px */
 @media screen and (max-width: 1200px) {
@@ -199,9 +217,40 @@ a:hover {
 
 }
 
+.resume-container {
+    display: flex;
+    justify-content: center;
+}
+
+.home-made {
+    text-align: center;
+    opacity: 0.5;
+    margin-bottom: 10px;
+}
+
+.resume-container .btn {
+    padding: 10px;
+    border: none;
+    background-color: #ffd32a;
+    border-bottom: 3px solid #e9c01f;
+    border-radius: 5px;
+    width: 30%;
+    color: #333333;
+    font-weight: 700;
+    transition: all ease .2s;
+}
+
+.resume-container .btn:hover {
+    cursor: pointer;
+    background-color: #ffdd59;
+   
+    transform: scale(1.1);
+}
+
 .projet div {
     margin: 5px;
 }
+
 
 
 .projet .img-container {
@@ -260,14 +309,14 @@ a:hover {
     border-radius: 10px;
 }
 
-.projet:hover {
+#projets .projet:hover {
     cursor: pointer;
 }
 
 
 
 
-.projet::after {
+#projets .projet::after {
     content: "Consulter le projet";
     width: 100%;
     height: 20px;
@@ -281,12 +330,12 @@ a:hover {
     border-bottom-right-radius: 7px;
     display: flex;
     justify-content: center;
-    color: #fff;
+    color: #333333;
     transform: scaleY(0);
 
 }
 
-.projet:hover::after {
+#projets .projet:hover::after {
     transform: scaleY(1);
     transition: all ease .1s;
 }
@@ -326,6 +375,8 @@ a:hover {
     background-color: #b3b3b344;
 
 }
+
+#expertise 
 
 
 /* PROFILS */
@@ -437,17 +488,39 @@ footer {
     gap: 10px;
 }
 
+
+
 .content-w {
     width: 80%;
     text-align: justify;
+    font-style: italic;
 }
-
 
 
 footer .author {
     font-style: italic;
     margin: 5px;
     
+}
+
+.contact-me .btn {
+    padding: 10px 25px;
+    transition: all ease .3s;
+    border: none;
+    background-color: #ffd32a;
+    border-bottom: 3px solid #e9c01f;
+    border-radius: 4px;
+    color: #333333;
+    outline: 2px  solid #ffde598a;
+    outline-offset: 5px;
+}
+
+.contact-me .btn:hover {
+    transform: scale(1.1);
+    transition: all ease .2s;
+    cursor: pointer;
+    outline-offset: 0px;
+
 }
 
 
@@ -487,3 +560,25 @@ h2::before {
 }
 
 
+#expertise .infos p, #projets .infos p {
+    padding: 10px;
+    text-align: justify;
+    opacity: 0.9;
+}
+
+.nav-bar {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    gap:25px;
+    align-items: center;
+    top: 0;
+    width: 70%;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.18);
+    z-index: 9999999;
+    opacity: 0.90;
+    backdrop-filter: blur(10px);
+}
