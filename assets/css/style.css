@@ -317,7 +317,7 @@ main {
 
 
 #projets .projet::after {
-    content: "Consulter le projet";
+    content: "See more";
     width: 100%;
     height: 20px;
     padding-top:5px;
