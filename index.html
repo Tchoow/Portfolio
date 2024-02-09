@@ -244,6 +244,7 @@
 
                 <p class="content-w">"Please feel free to contact me to discuss how I can contribute to your projects or address any questions you may have. I am excited to explore new possibilities and contribute my unique perspective to your endeavors. Let's connect and create something remarkable together." ✌️</p>
                 <p class="author"> Made with 🧡 by Théo the 12/05/2023</p>
+
                 <br>
                 <br>
                 <br>
@@ -254,7 +255,7 @@
                 <br>
                 <hr>
                 <br>
-                <h2>© 2023 - Theo Lavie</h2>
+                <h2>© <span id="year"></span> - Theo Lavie</h2>
             </footer>
             <br>
             <br>
@@ -263,5 +264,8 @@
     <!-- Link js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+    document.querySelector("#year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
